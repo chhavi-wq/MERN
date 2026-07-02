@@ -1,0 +1,126 @@
+@import "tailwindcss";
+ /* npm install @fontsource/league-gothic */
+html{
+    scroll-behavior: smooth;
+}
+#block,
+#block2, #block3,#block4 {
+    position: absolute;
+    z-index: 0;
+    pointer-events: none;
+} 
+
+#block{
+    background: rgba(139, 138, 136, 0.237);
+    height: 300px;
+    width: 300px;
+    top: 10%;
+    left: -8%;
+    border-radius: 50%;
+    filter: blur(13px);
+    animation: move 2s ease-in-out infinite alternate;
+}
+
+#block2{
+   background: rgba(174, 170, 170, 0.248);
+    height: 350px;
+    width: 350px;
+    top: 3%;
+    left: -8%;
+    border-radius: 50%;
+    filter: blur(13px);
+    animation: float 2s ease-in-out infinite alternate;
+}
+
+@keyframes move{
+    0%{
+        transform: translate(0,0) scale(1);
+    }
+    100%{
+        transform: translate(60px,-35px) scale(1.08);
+    }
+}
+
+@keyframes float{
+    0%{
+        transform: translate(0,0) scale(1);
+    }
+    100%{
+        transform: translate(60px,80px) scale(1.08);
+    }
+}
+
+#block3{
+  background: rgba(125, 124, 123, 0.18);
+    height: 350px;
+    width: 350px;
+    bottom: 10%;
+    right: -8%;
+    border-radius: 50%;
+    filter: blur(13px);
+    animation: move2 2s ease-in-out infinite alternate;
+}
+#block4{
+   background: rgba(211, 206, 202, 0.18);
+    height: 350px;
+    width: 350px;
+    bottom: 10%;
+    right: -8%;
+    border-radius: 50%;
+    filter: blur(15px);
+    animation: float2 2s ease-in-out infinite alternate;
+}
+@keyframes float2{
+    0%{
+        transform: translate(0,0) scale(1);
+    }
+    100%{
+        transform: translate(60px,80px) scale(1.08);
+    }
+}
+@keyframes move2{
+    0%{
+        transform: translate(0,0) scale(1);
+    }
+    100%{
+        transform: translate(60px,80px) scale(0.90);
+    }
+}
+
+#btn{
+    position: relative;
+    overflow: hidden;
+}
+
+#btn::after{
+    content:"";
+    position: absolute;
+    left: 0%;
+    bottom: -100%;
+    height: 100%;
+    width: 100%;
+    background-color: #2c2c35;
+    transition: transform 0.4s ease;
+    z-index: 0;
+}
+
+#btn:hover::after{
+    transform:translateY(-100%);
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+.animate-float {
+  animation: float 5s ease-in-out infinite;
+}
+
+
