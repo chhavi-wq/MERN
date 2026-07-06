@@ -89,7 +89,7 @@ const Contact = () => {
               <textarea
                 rows="6"
                 placeholder="Write your message..."
-                className="w-full border border-gray-300 rounded-xl px-5 py-4 outline-none resize-none focus:border-[#B58863]"
+                className="w-full border border-gray-300 rounded-xl px-5 py-4 outline-none focus:border-[#B58863]"
               ></textarea>
             </div>
 
